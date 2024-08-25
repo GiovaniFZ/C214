@@ -1,5 +1,18 @@
 {
   "devDependencies": {
+    "@types/node": "^22.5.0",
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start:prod": "npm run build && node dist/index.js",
+    "build": "tsc",
+    "format": "prettier --write \"**/*.ts\"",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
   }
 }
